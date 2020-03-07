@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'hnu';
+    src: url('../fonts/HangeulNuriR.ttf');
+}@font-face {
+    font-family: 'hnuB';
+    src: url('../fonts/HangeulNuriB.ttf');
+}
+@keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+h1,h2,h3,p,span,label{
+    font-family: 'hnu', sans-serif;
+    -ms-user-select: none; -moz-user-select: -moz-none; 
+    -webkit-user-select: none; -khtml-user-select: none;
+     user-select:none;
+}
+html{
+    position: relative;
+    min-height: 100%;
+}
+body{
+    background-color:black;
+    margin:0;
+    animation: fadein 1000ms ease-out;
+}
+
+footer{
+    text-align: right;
+    font-size:13px;
+    position: absolute;
+    bottom:0;
+    padding:15px;
+    line-height:5px;
+    color:white;
+    margin-top:100px;
+}
+.logo{
+    max-width:150px;
+    margin-top:15px;
+}
+.middle_content{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-40%);
+    width: 100%;
+    text-align:center;
+    color:white;
+    
+    
+}
+
+.left{
+    text-align:left;
+    margin-left:15%;
+}
+.yellow{
+    color:rgba(255, 174, 0, 0.993);
+}
+.B{
+    font-family: hnuB;
+}
+.button_lion{
+    background-color:rgba(255, 174, 0, 0.993);
+    border:3px solid rgba(0,0,0,0.1);
+    color:rgba(0, 0, 0, 0.5);
+    width:130px;
+    height:45px;
+    margin-top:20px;
+}
+.input-box{
+    width:100%;
+    margin-bottom:20px;
+}
+.title{
+    font-size:25px;
+}@media screen and (min-width: 1000px) {
+  .title {
+     font-size: 60px;
+  }
+}
+.form-control,textarea,.sl{
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid #FF9E1B;
+}
+.form-control{
+    width:100%;
+    max-width:200px;
+}
+textarea{
+    min-width: 80%;
+    min-height:400px;
+    width:100%;
+}
+.form-box{
+    margin-top:50px;
+    color:white;
+}
+.policy_box{
+    font-size:10px;
+}
+.submit_button{
+    margin-bottom:200px;
+    float:right;
+}

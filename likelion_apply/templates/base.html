@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn-apply.likelion.org/static/img/favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/mycss.css'%}?{% now "U" %}">
+    <!--?{% now "U" %}-->
+    
+    <title>멋쟁이 사자처럼 8기 지원</title>
+    <script>
+        jQuery(function($) {
+            $("body").css("display", "none");
+            $("body").fadeIn(2000);
+            $("a.transition").click(function(event){
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);
+            });
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        });
+    </script>
+        
+  </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 container">
+                    <img class="logo"
+                    onclick="location.href='/'" 
+                     src="https://cdn-apply.likelion.org/static/imgs/logo.png" 
+                     alt="멋쟁이사자처럼 로고">
+                </div>
+            </div>
+        </div>
+        {% block content %} 
+        {% endblock %} 
+
+
+    
+    </body>
+    <footer class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-12 container">
+                    <p>17호관 학생회관 321호</p>
+                    <p>pkw8117197@likelion.org</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>
