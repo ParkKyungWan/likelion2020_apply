@@ -8,7 +8,7 @@ class Apply(models.Model):
     phone=models.CharField(max_length=20)
     year=models.CharField(max_length=20)
     major=models.CharField(max_length=20)
-    url=models.CharField(max_length=20)
+    url=models.TextField()
     why = models.TextField()
     service = models.TextField()
     memory = models.TextField()

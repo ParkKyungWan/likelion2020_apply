@@ -10,7 +10,7 @@
     to {opacity:1;}
 }
 
-h1,h2,h3,p,span{
+h1,h2,h3,p,span,label{
     font-family: 'hnu', sans-serif;
     -ms-user-select: none; -moz-user-select: -moz-none; 
     -webkit-user-select: none; -khtml-user-select: none;
@@ -33,7 +33,6 @@ footer{
     bottom:0;
     padding:15px;
     line-height:5px;
-    background-color:rgba(255,255,255,0.05);
     color:white;
     margin-top:100px;
 }
@@ -49,6 +48,12 @@ footer{
     text-align:center;
     color:white;
     
+    
+}
+
+.left{
+    text-align:left;
+    margin-left:15%;
 }
 .yellow{
     color:rgba(255, 174, 0, 0.993);
@@ -63,4 +68,40 @@ footer{
     width:130px;
     height:45px;
     margin-top:20px;
+}
+.input-box{
+    width:100%;
+    margin-bottom:20px;
+}
+.title{
+    font-size:25px;
+}@media screen and (min-width: 1000px) {
+  .title {
+     font-size: 60px;
+  }
+}
+.form-control,textarea,.sl{
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid #FF9E1B;
+}
+.form-control{
+    width:100%;
+    max-width:200px;
+}
+textarea{
+    min-width: 80%;
+    min-height:400px;
+    width:100%;
+}
+.form-box{
+    margin-top:50px;
+    color:white;
+}
+.policy_box{
+    font-size:10px;
+}
+.submit_button{
+    margin-bottom:200px;
+    float:right;
 }
