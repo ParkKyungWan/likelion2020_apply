@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Apply
 
 # Create your views here.
@@ -28,3 +28,7 @@ def check_apply(request):
     applys = Apply.objects.all()
     # applys_list = Apply.objects.all()
     return render(request, 'check.html', {'applys':applys})
+
+def applier(request, applier_id):
+    applier = get_object_or_404(Apply, pk=applier_id)
+    return render(request, 'applier.html', {'applier':applier})

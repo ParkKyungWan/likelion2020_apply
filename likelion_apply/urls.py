@@ -22,5 +22,6 @@ urlpatterns = [
     path('',apply_app.views.home,name="home"),
     path('apply/',apply_app.views.apply,name="apply"),
     path('apply/confirm/', apply_app.views.confirm, name='confirm'),
-    path('foradmin/', apply_app.views.check_apply, name="check_apply")
+    path('foradmin/', apply_app.views.check_apply, name="check_apply"),
+    path('foradmin/applier/<int:applier_id>', apply_app.views.applier, name="applier"),
 ]
