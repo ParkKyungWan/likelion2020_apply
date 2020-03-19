@@ -23,5 +23,6 @@ urlpatterns = [
     path('apply/',apply_app.views.apply,name="apply"),
     path('apply/confirm/', apply_app.views.confirm, name='confirm'),
     path('foradmin/', apply_app.views.check_apply, name="check_apply"),
+    path('foradmin/<int:applier_id>/delete', apply_app.views.delete_applier,name='delete'),
     path('foradmin/applier/<int:applier_id>', apply_app.views.applier, name="applier"),
 ]

@@ -168,4 +168,9 @@ textarea{
     border-radius: 10px;
     color: black;
 }
+
+.delete-apply{
+    color: white;
+    text-align: center;
+}
 /* add static */

@@ -16,11 +16,7 @@
                             class="btn-warning check-btn">
                             <span class="B">지원서 확인</span>
                         </button>
-                        <button 
-                            onclick="location.href='/apply'" 
-                            class="btn-warning check-btn">
-                            <span class="B">X</span>
-                        </button>
+                        <a class="delete-apply" href="{% url 'delete' apply.id %}"> 삭제 </a>
                 </div>
             {%endfor%}
         </div>
