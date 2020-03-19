@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 import apply_app.views;
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',apply_app.views.home,name="home"),
     path('apply/',apply_app.views.apply,name="apply"),
     path('apply/confirm/', apply_app.views.confirm, name='confirm'),
+    path('foradmin/', apply_app.views.check_apply, name="check_apply")
 ]

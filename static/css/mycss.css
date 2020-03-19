@@ -47,8 +47,6 @@ footer{
     width: 100%;
     text-align:center;
     color:white;
-    
-    
 }
 
 .left{
@@ -104,4 +102,9 @@ textarea{
 .submit_button{
     margin-bottom:200px;
     float:right;
+}
+
+.check-box{
+    margin-top:50px;
+    color:white;
 }

@@ -1,0 +1,23 @@
+{%include 'base.html'%}
+{%load static%}
+{%block content%}
+    <div class="container" >
+        <div class="h1-highlight">
+            <h1>지원자 명단</h1>
+            <h3>총 지원자 수 : {{applys.all.count}} 명 </h3>
+        </div>
+        <div class="applier-content">
+            {% for apply in applys.all %}
+                <div class="applier-box">
+                        <h3>이름 : {{apply.name}}</h3>
+                        <p>전공 : {{apply.major}}</p>
+                        <button 
+                            onclick="location.href='/apply'" 
+                            class="btn-warning check-btn">
+                            <span class="B">지원서 확인</span>
+                        </button>
+                </div>
+            {%endfor%}
+        </div>
+    </div>
+{%endblock%}

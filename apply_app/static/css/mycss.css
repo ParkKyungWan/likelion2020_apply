@@ -47,8 +47,6 @@ footer{
     width: 100%;
     text-align:center;
     color:white;
-    
-    
 }
 
 .left{
@@ -132,6 +130,8 @@ textarea{
     width:100%;
 }
 .form-box{
+    width: auto;
+    height: auto;
     margin-top:50px;
     color:white;
 }
@@ -143,5 +143,29 @@ textarea{
     float:right;
 }
 
+.h1-highlight{
+    margin: 10px 10px 0px 0px;
+    color:white;
+    text-align: center;
+}
 
+.applier-content{
+    text-align: center;
+    width: 120%;
+}
 
+.applier-box{
+    width: 20%;
+    float: left;
+    margin: 10px;
+    border: 1px solid #FF9E1B;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+}
+
+.check-btn{
+    border-radius: 10px;
+    color: black;
+}
+/* add static */

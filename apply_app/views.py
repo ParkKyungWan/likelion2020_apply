@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Apply
+
 # Create your views here.
 def home(request):
     return render(request,'home.html')
@@ -21,3 +22,9 @@ def confirm(request):
     human.coding = str(request.GET['coding'])
     human.save()
     return render(request,'success.html')
+
+
+def check_apply(request):
+    applys = Apply.objects.all()
+    # applys_list = Apply.objects.all()
+    return render(request, 'check.html', {'applys':applys})
