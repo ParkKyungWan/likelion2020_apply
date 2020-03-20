@@ -13,6 +13,7 @@ class Apply(models.Model):
     service = models.TextField()
     memory = models.TextField()
     coding = models.TextField()
+    # files=models.FileField(null=True)
     
     def __str__(self):
         return self.name

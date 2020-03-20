@@ -15,6 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 import apply_app.views;
 
 urlpatterns = [
@@ -26,3 +30,4 @@ urlpatterns = [
     path('foradmin/<int:applier_id>/delete', apply_app.views.delete_applier,name='delete'),
     path('foradmin/applier/<int:applier_id>', apply_app.views.applier, name="applier"),
 ]
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

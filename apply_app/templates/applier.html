@@ -7,39 +7,74 @@
 
     <div class="container form-box">
         <div class="applier-detail applier-name">
-            <h1>지원자 : <span class="yellow">{{applier.name}}</span></h1>
+            <h2>지원자 : <span class="yellow">{{applier.name}}</span></h2>
         </div>
-        <div class="applier-detail">
-            <h3>전공 : <span class="yellow">{{applier.major}}</span></h3>
+        <div class="applier-info">
+            <div class="applier-detail">
+                <h3>전공 : <span class="yellow">{{applier.major}}</span></h3>
+            </div>
+            <div class="applier-detail">
+                <h3>성별 : 
+                    <span class="yellow">
+                        {% if applier.gender == 'm'%}
+                        남자
+                        {% else %}
+                        여자
+                        {% endif %}
+                    </span>
+                </h3>
+            </div>
+            <div class="applier-detail">
+                <h3>연락처 : <span class="yellow">{{applier.phone}}</span></h3>
+            </div>
+            <div class="applier-detail">
+                <h3>학번 : <span class="yellow">{{applier.year|slice:"2:"}}학번</span></h3>
+            </div>
+            <div class="applier-detail">
+                <h3> Blog / Github : 
+                    <span class="yellow">
+                        {% if applier.url != '' %}
+                        <a 
+                            href="{{applier.url}}">{{applier.url}}</a>
+                        {% else %}
+                        첨부내용 없음
+                        {% endif %}
+                    </span>
+                </h3>
+            </div>
         </div>
-        <div class="applier-detail">
-            <h3>성별 : 
-                <span class="yellow">
-                    {% if applier.gender == 'm'%}
-                    남자
-                    {% else %}
-                    여자
-                    {% endif %}
-                </span>
-            </h3>
-        </div>
-        <div class="applier-detail">
-            <h3>연락처 : <span class="yellow">{{applier.phone}}</span></h3>
-        </div>
-        <div class="applier-detail">
-            <h3>학번 : <span class="yellow">{{applier.year|slice:"2:"}}학번</span></h3>
-        </div>
-        <div class="applier-detail">
-            <h3> Blog / Github : 
-                <span class="yellow">
-                    {% if applier.url != '' %}
-                    <a 
-                        href="{{applier.url}}">{{applier.url}}</a>
-                    {% else %}
-                    첨부내용 없음
-                    {% endif %}
-                </span>
-            </h3>
+        
+            <div class="applier-detail applier-name">
+                <h2>지원동기</h2>
+            </div>
+            <div class="applier-info">
+                <p class="p-font">{{applier.why|linebreaksbr}}</p>
+            </div>
+
+            <div class="applier-detail applier-name">
+                <h2>만들고 싶은 서비스</h2>
+            </div>
+            <div class="applier-info">
+                <p class="p-font">{{applier.service|linebreaksbr}}</p>
+            </div>
+
+            <div class="applier-detail applier-name">
+                <h2>기억에 남는 단체활동 경험 또는 프로젝트</h2>
+            </div>
+            <div class="applier-info">
+                <p class="p-font">{{applier.memory|linebreaksbr}}</p>
+            </div>
+
+            <div class="applier-detail applier-name">
+                <h2>프로그래밍 경험 또는 배우고싶은 내용</h2>
+            </div>
+            <div class="applier-info">
+                <p class="p-font">{{applier.coding|linebreaksbr}}</p>
+            </div>
+            
+            
+        <div>
+
         </div>
         
     </div>

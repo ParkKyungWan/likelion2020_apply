@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from .models import Apply
+# from .forms import PostApply
 
 # Create your views here.
 def home(request):
@@ -21,6 +22,11 @@ def confirm(request):
     human.coding = str(request.GET['coding'])
     human.save()
     return render(request,'success.html')
+
+# def confirm(request):
+#     form = PostApply()
+
+#     return render(request,'success.html')
 
 def check_apply(request):
     applys = Apply.objects.all()

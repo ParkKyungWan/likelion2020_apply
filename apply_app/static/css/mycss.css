@@ -149,6 +149,10 @@ textarea{
     text-align: center;
 }
 
+.p-font{
+    font-size: 20px;
+}
+
 .applier-content{
     text-align: center;
     width: 120%;
@@ -181,7 +185,19 @@ textarea{
 .applier-detail{
     margin-bottom: 10px;
 }
+
 .applier-name{
     text-align: center;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom:30px;
+
 }
+
+.applier-info{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #FF9E1B;
+    border-radius: 15px;
+}
+
