@@ -11,11 +11,11 @@ def home(request):
 def check_apply(request):
     applys = Apply.objects.all()
     # applys_list = Apply.objects.all()
-    return render(request, 'check.html', {'applys':applys})
+    return render(request, 'admin/check.html', {'applys':applys})
 
 def applier(request, applier_id):
     applier = get_object_or_404(Apply, pk=applier_id)
-    return render(request, 'applier.html', {'applier':applier})
+    return render(request, 'admin/applier.html', {'applier':applier})
 
 def delete_applier(request, applier_id):
     applier = Apply.objects.get(id=applier_id)

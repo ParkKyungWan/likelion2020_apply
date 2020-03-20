@@ -53,6 +53,9 @@ footer{
     text-align:left;
     margin-left:15%;
 }
+.div-center{
+    text-align:center;
+}
 .yellow{
     color:rgba(255, 174, 0, 0.993);
 }
