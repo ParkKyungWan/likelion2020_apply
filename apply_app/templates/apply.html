@@ -3,7 +3,8 @@
 {%block content%}
 
     <div class="container form-box">
-            <form action="{%url 'confirm'%}">
+            <form method="post" enctype="multipart/form-data" novalidate>
+                {% csrf_token %}
                 <div class="input-box">
                     <label >* 이름</label>
                     <input name="name" type="text" class="form-control form-control-sm"  required>
@@ -33,31 +34,37 @@
                 <div class="input-box">
                     <label><span style="color:gray">(선택) </span>
                         깃허브 또는 SNS(블로그 등) 링크</label>
-                    <input name="url" type="url" class="form-control form-control-sm">
+                        <input name="url" type="url" class="form-control form-control-sm">
                 </div>
                 <div class="input-box">
                     <label>* 지원 동기</label>
                     <br>
-                    <textarea name="why" name="answer1"  required=""></textarea>
+                    <textarea name="why"></textarea>
                 </div>
-                <!-- 포트폴리오로 추가할것 -->
-                <div class="input-box">
-                    <label>* 만들고 싶은 서비스</label>
-                    <br>
-                    <textarea name="service" name="answer1" required=""></textarea>
-                </div>
+
+                <!-- 지원동기 그딴거 -->
                 <div class="input-box">
                     <label>* 가장 기억에 남는 단체활동 경험 또는 프로젝트 경험을 말씀해주세요! (코딩 관련 경험이 아니어도 좋습니다!)
                     </label>
                     <br>
-                    <textarea name="memory" name="answer1" required=""></textarea>
+                    <textarea name="memory"></textarea>
                 </div>
                 <div class="input-box">
                     <label>* 코딩이나 프로그래밍 언어를 접한 적이 있나요? 만약 없다면, 알고 있거나 배우고 싶은 내용을 말씀해주세요!
                     </label>
                     <br>
-                    <textarea name="coding" name="answer1" required=""></textarea>
+                    <textarea name="coding"></textarea>
                 </div>
+                <div class="input-box">
+                    <label>* 멋쟁이 사자처럼에서 만들고 싶은 서비스에 대한 상세한 설명이 담긴 PPT또는 기타 문서 파일을 정리해서 올려주세요!
+                    </label>
+                    <br>
+                    {{form.files}}
+                    <textarea class="mar" name="service"></textarea>
+                </div>
+
+
+                <!-- policy -->
                 <div class="input-box policy_box">
                     인천대 멋쟁이 사자처럼이 운영하는 inulion.xyz는 개인정보를 중요하게 생각하며 “정보통신 이용촉진 및 정보보호등에 관한 법률“,<br>
                          “개인정보보호법 제15조” 등 법령상의 개인정보보호 규정을 준수하며, 관련 법령에 의거한 개인정보를 취급(처리)하고 있습니다.<br>

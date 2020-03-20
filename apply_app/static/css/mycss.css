@@ -129,10 +129,20 @@ textarea{
     min-height:400px;
     width:100%;
 }
+.file-box{
+    width: 20%;
+    float: left;
+    margin: 10px;
+    border: 1px solid #FF9E1B;
+    color: white;
+    padding: 10px;
+}
+
 .form-box{
     width: auto;
     height: auto;
     margin-top:50px;
+    margin-bottom: 100px;
     color:white;
 }
 .policy_box{
@@ -156,6 +166,10 @@ textarea{
 .applier-content{
     text-align: center;
     width: 120%;
+}
+
+.mar{
+    margin-top: 10px;
 }
 
 .applier-box{

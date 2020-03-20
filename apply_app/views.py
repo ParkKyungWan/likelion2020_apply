@@ -1,32 +1,12 @@
-from django.shortcuts import render,redirect, get_object_or_404
-from .models import Apply
-# from .forms import PostApply
+from django.shortcuts import render,redirect, get_object_or_404, HttpResponseRedirect
+from django.core.files.storage import FileSystemStorage
 
-# Create your views here.
+from .forms import PostApply
+
+from .models import Apply
+
 def home(request):
     return render(request,'home.html')
-def apply(request):
-    return render(request,'apply.html')
-
-def confirm(request):
-    human = Apply()
-    human.name = str(request.GET['name'])
-    human.gender = str(request.GET['gender'])
-    human.phone = str(request.GET['phone'])
-    human.year = str(request.GET['year'])
-    human.major = str(request.GET['major'])
-    human.url = str(request.GET['url'])
-    human.why = str(request.GET['why'])
-    human.service = str(request.GET['service'])
-    human.memory = str(request.GET['memory'])
-    human.coding = str(request.GET['coding'])
-    human.save()
-    return render(request,'success.html')
-
-# def confirm(request):
-#     form = PostApply()
-
-#     return render(request,'success.html')
 
 def check_apply(request):
     applys = Apply.objects.all()
@@ -41,3 +21,13 @@ def delete_applier(request, applier_id):
     applier = Apply.objects.get(id=applier_id)
     applier.delete()
     return redirect('/foradmin')
+
+def confirm(request):
+    if request.method == 'POST':
+        form = PostApply(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return render(request,'success.html')
+    else:
+        form = PostApply()
+    return render(request, 'apply.html', {'form': form})

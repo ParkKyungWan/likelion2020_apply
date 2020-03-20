@@ -33,11 +33,23 @@
             <div class="applier-detail">
                 <h3> Blog / Github : 
                     <span class="yellow">
-                        {% if applier.url != '' %}
+                        {% if applier.url %}
                         <a 
                             href="{{applier.url}}">{{applier.url}}</a>
                         {% else %}
                         첨부내용 없음
+                        {% endif %}
+                    </span>
+                </h3>
+            </div>
+            <div class="applier-detail">
+                <h3> 첨부파일 : 
+                    <span class="yellow">
+                        {% if applier.files %}
+                        <a 
+                            href="/media/{{applier.files}}">다운로드</a>
+                        {% else %}
+                        없음
                         {% endif %}
                     </span>
                 </h3>
@@ -71,10 +83,7 @@
             <div class="applier-info">
                 <p class="p-font">{{applier.coding|linebreaksbr}}</p>
             </div>
-            
-            
         <div>
-
         </div>
         
     </div>
