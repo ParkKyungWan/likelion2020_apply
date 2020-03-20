@@ -1,6 +1,47 @@
 {%include 'base.html'%}
 {%load static%}
+<script>
+
+</script>
 {%block content%}
-지원자확인페이지 
-지원자 번호 : {{applier.id}}
+
+    <div class="container form-box">
+        <div class="applier-detail applier-name">
+            <h1>지원자 : <span class="yellow">{{applier.name}}</span></h1>
+        </div>
+        <div class="applier-detail">
+            <h3>전공 : <span class="yellow">{{applier.major}}</span></h3>
+        </div>
+        <div class="applier-detail">
+            <h3>성별 : 
+                <span class="yellow">
+                    {% if applier.gender == 'm'%}
+                    남자
+                    {% else %}
+                    여자
+                    {% endif %}
+                </span>
+            </h3>
+        </div>
+        <div class="applier-detail">
+            <h3>연락처 : <span class="yellow">{{applier.phone}}</span></h3>
+        </div>
+        <div class="applier-detail">
+            <h3>학번 : <span class="yellow">{{applier.year|slice:"2:"}}학번</span></h3>
+        </div>
+        <div class="applier-detail">
+            <h3> Blog / Github : 
+                <span class="yellow">
+                    {% if applier.url != '' %}
+                    <a 
+                        href="{{applier.url}}">{{applier.url}}</a>
+                    {% else %}
+                    첨부내용 없음
+                    {% endif %}
+                </span>
+            </h3>
+        </div>
+        
+    </div>
+    
 {%endblock%}

@@ -166,11 +166,22 @@ textarea{
 
 .check-btn{
     border-radius: 10px;
-    color: black;
+    color: black !important;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .delete-apply{
     color: white;
     text-align: center;
 }
-/* add static */
+
+.applier-detail{
+    margin-bottom: 10px;
+}
+.applier-name{
+    text-align: center;
+    margin-bottom: 30px;
+}
