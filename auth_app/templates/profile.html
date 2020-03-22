@@ -5,9 +5,21 @@
 <div class="container" >
     {{ data.is_authenticated }}
     <div class="h1-highlight">
-        <h1><span class="yellow">{{ data.username }}</span> 님!</h1>
+        <h1><span class="yellow">{{ data.username }}</span> 님의 픽!</h1>
     </div>
 
+    <div class="applier-content">
+        {% for apply in applys.all %}
+            <div class="applier-box">
+                    <h3>이름 : {{apply.name}}</h3>
+                    <p>전공 : {{apply.major}}</p>
+                    <a onclick="location.href='applier/{{apply.id}}'" class="btn-warning check-btn">
+                        <span class="B">지원서 확인</span>
+                    </a>
+                    <!-- <a class="delete-apply" href="{% url 'delete' apply.id %}"> 삭제 </a> -->
+            </div>
+        {%endfor%}
+    </div>
     <!-- <ul>
         {% for key,value in data.items %}
         <div class="h1-highlight">
@@ -16,6 +28,5 @@
         </div>
         {% endfor %}
     </ul> -->
-    <a class="delete-apply" href="{% url 'logout' %}"> 로그아웃 하기 </a>
 </div>
 {%endblock%}
