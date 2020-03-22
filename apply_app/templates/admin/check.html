@@ -2,9 +2,10 @@
 {%load static%}
 {%block content%}
     <div class="container" >
+        
         <div class="h1-highlight">
             <h1>지원자 명단</h1>
-            <h3>총 지원자 수 : {{applys.all.count}} 명 </h3>
+            <h3>총 지원자 수 : <span class="yellow">{{applys.all.count}}</span> 명 </h3>
         </div>
         <div class="applier-content">
             {% for apply in applys.all %}

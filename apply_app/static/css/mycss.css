@@ -102,7 +102,9 @@ footer{
             transform: translateX(0%);
         }
 }
-
+.div-inline{
+    display:inline;
+}
 .title_lion{
     font-size:30*1.3px;
     z-index: 10;
@@ -127,6 +129,13 @@ footer{
     width:100%;
     max-width:200px;
 }
+
+.form-login{
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid #FF9E1B;
+}
+
 textarea{
     min-width: 80%;
     min-height:400px;
@@ -218,3 +227,4 @@ textarea{
     border-radius: 15px;
 }
 
+/* test222 */

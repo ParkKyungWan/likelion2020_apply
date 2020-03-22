@@ -53,6 +53,9 @@ footer{
     text-align:left;
     margin-left:15%;
 }
+.div-center{
+    text-align:center;
+}
 .yellow{
     color:rgba(255, 174, 0, 0.993);
 }
@@ -66,17 +69,56 @@ footer{
     width:130px;
     height:45px;
     margin-top:20px;
-}
+
+    position:relative;
+    margin-left:15px;
+    
+    }.button_lion:after{
+        border-top:15px solid rgba(255,174,0,0.933);
+        border-left: 15px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 0px solid transparent;
+        content:"";
+        position:absolute;
+        top:10px;
+        left:-15px;
+    }
 .input-box{
     width:100%;
     margin-bottom:20px;
 }
 .title{
-    font-size:25px;
-}@media screen and (min-width: 1000px) {
-  .title {
-     font-size: 60px;
-  }
+    
+    transform: translateX(-25%);
+    font-size:30px;
+    color:rgba(255,255,255,0.3)
+    }@media screen and (min-width: 700px) {
+    .title {
+        font-size: 5em;
+    }
+    }@media screen and (min-width: 1500px) {
+        .title {
+            font-size: 5em;
+            transform: translateX(0%);
+        }
+}
+.div-inline{
+    display:inline;
+}
+.title_lion{
+    font-size:30*1.3px;
+    z-index: 10;
+    transform: translateY(-50%);
+    
+    }@media screen and (min-width: 700px) {
+    .title_lion {
+        font-size: 6.5em;
+    }
+    }@media screen and (min-width: 1500px) {
+        .title {
+            font-size: 5em;
+            transform: translateY(0%);
+        }
 }
 .form-control,textarea,.sl{
     background-color: black;
@@ -87,13 +129,32 @@ footer{
     width:100%;
     max-width:200px;
 }
+
+.form-login{
+    background-color: black;
+    color: whitesmoke;
+    border: 1px solid #FF9E1B;
+}
+
 textarea{
     min-width: 80%;
     min-height:400px;
     width:100%;
 }
+.file-box{
+    width: 20%;
+    float: left;
+    margin: 10px;
+    border: 1px solid #FF9E1B;
+    color: white;
+    padding: 10px;
+}
+
 .form-box{
+    width: auto;
+    height: auto;
     margin-top:50px;
+    margin-bottom: 100px;
     color:white;
 }
 .policy_box{
@@ -104,7 +165,66 @@ textarea{
     float:right;
 }
 
-.check-box{
-    margin-top:50px;
+.h1-highlight{
+    margin: 10px 10px 0px 0px;
     color:white;
+    text-align: center;
 }
+
+.p-font{
+    font-size: 20px;
+}
+
+.applier-content{
+    text-align: center;
+    width: 120%;
+}
+
+.mar{
+    margin-top: 10px;
+}
+
+.applier-box{
+    width: 20%;
+    float: left;
+    margin: 10px;
+    border: 1px solid #FF9E1B;
+    border-radius: 15px;
+    color: white;
+    padding: 10px;
+}
+
+.check-btn{
+    border-radius: 10px;
+    color: black !important;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.delete-apply{
+    color: white;
+    text-align: center;
+}
+
+.applier-detail{
+    margin-bottom: 10px;
+}
+
+.applier-name{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom:30px;
+
+}
+
+.applier-info{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #FF9E1B;
+    border-radius: 15px;
+}
+
+/* test222 */

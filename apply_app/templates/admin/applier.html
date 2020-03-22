@@ -1,13 +1,10 @@
 {%include 'base.html'%}
 {%load static%}
-<script>
-
-</script>
 {%block content%}
 
     <div class="container form-box">
         <div class="applier-detail applier-name">
-            <h2>지원자 : <span class="yellow">{{applier.name}}</span></h2>
+            <h1>지원자 : <span class="yellow">{{applier.name}}</span></h1>
         </div>
         <div class="applier-info">
             <div class="applier-detail">
@@ -85,11 +82,11 @@
             </div>
             <div>
             <div class="div-center">
-                <button 
-                    onclick="location.href='/foradmin'" 
+                <a 
+                    href="{% url 'check_apply' %}"
                     class="btn button_lion">
                     <span class="B">돌아가기</span>
-                </button>
+            </a>
             </button>
             </div>
         </div>

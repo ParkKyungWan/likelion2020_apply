@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apply_app.apps.ApplyAppConfig',
+    'auth_app.apps.Auth_appConfig',
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+# For member
+LOGIN_REDIRECT_URL = '/auth/profile'
+LOGOUT_REDIRECT_URL = '/auth/login'
+LOGIN_URL = '/auth/login'

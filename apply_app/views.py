@@ -1,6 +1,8 @@
 from django.shortcuts import render,redirect, get_object_or_404, HttpResponseRedirect
 from django.core.files.storage import FileSystemStorage
 
+from django.contrib.auth.decorators import login_required   
+
 from .forms import PostApply
 
 from .models import Apply
@@ -8,6 +10,7 @@ from .models import Apply
 def home(request):
     return render(request,'home.html')
 
+@login_required
 def check_apply(request):
     applys = Apply.objects.all()
     # applys_list = Apply.objects.all()
@@ -20,7 +23,7 @@ def applier(request, applier_id):
 def delete_applier(request, applier_id):
     applier = Apply.objects.get(id=applier_id)
     applier.delete()
-    return redirect('/foradmin')
+    return redirect('/apply/foradmin')
 
 def confirm(request):
     if request.method == 'POST':

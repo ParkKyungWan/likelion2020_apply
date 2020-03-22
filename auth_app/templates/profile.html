@@ -1,0 +1,21 @@
+{%include 'base.html'%}
+{%load static%}
+{%block content%}
+
+<div class="container" >
+    {{ data.is_authenticated }}
+    <div class="h1-highlight">
+        <h1><span class="yellow">{{ data.username }}</span> 님!</h1>
+    </div>
+
+    <!-- <ul>
+        {% for key,value in data.items %}
+        <div class="h1-highlight">
+            <h1>{{ key }} : {{ value }}</h1>
+            <br>
+        </div>
+        {% endfor %}
+    </ul> -->
+    <a class="delete-apply" href="{% url 'logout' %}"> 로그아웃 하기 </a>
+</div>
+{%endblock%}
