@@ -29,9 +29,8 @@ def profile(request):
     else:
         data = {'last_login': request.user.last_login, 'username': request.user.username,
                 'password': request.user.password, 'is_authenticated': request.user.is_authenticated}
-        # applys_sub = Cart.objects.filter(user=request.user)[0]
-        applys_sub = Cart.objects.get(id=3)
-        print('applys: ', applys_sub)
+        # applys_sub = Cart.objects.get(id=3)
+        # print('applys: ', applys_sub)
 
     return render(request, 'profile.html', context={'data': data})
 

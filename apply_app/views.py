@@ -10,6 +10,9 @@ from .models import Apply
 def home(request):
     return render(request,'home.html')
 
+def next(request):
+    return render(request, 'next.html')
+
 @login_required
 def check_apply(request):
     applys = Apply.objects.all()

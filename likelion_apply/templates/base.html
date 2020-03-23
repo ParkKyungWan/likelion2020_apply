@@ -52,10 +52,9 @@
                     {% if user.is_authenticated %}
                         <h3><a class="delete-apply mar-r" href="{% url 'check_apply' %}">지원자확인 </a></h3>
                         <br>
-                        <h3><a class="delete-apply mar-r" href="{% url 'profile' %}">장바구니 </a></h3>
                         <h3><a class="delete-apply mar-r" href="{% url 'logout' %}">로그아웃 </a></h3>
                     {% endif %}
-                </div>
+                    </div>
                     <img
                         style="height:70px;opacity:0.7;transform:translateY(60%);"
                         src="{% static 'image/inulion.png' %}"  

@@ -17,7 +17,6 @@ class Apply(models.Model):
     memory = models.TextField()
     coding = models.TextField()
     files=models.FileField(upload_to='files/', null=True)
-    # choice = models.BooleanField(initial=False)
     
-    # def __str__(self):
-    #     return self.name
+    def __str__(self):
+        return self.name
