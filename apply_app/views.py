@@ -16,7 +16,6 @@ def next(request):
 @login_required
 def check_apply(request):
     applys = Apply.objects.all()
-    # applys_list = Apply.objects.all()
     return render(request, 'admin/check.html', {'applys':applys})
 
 def applier(request, applier_id):
