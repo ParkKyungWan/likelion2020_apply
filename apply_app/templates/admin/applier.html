@@ -1,7 +1,7 @@
 {%include 'base.html'%}
 {%load static%}
 {%block content%}
-
+{% if user.is_authenticated %}
     <div class="container form-box">
         <div class="applier-detail applier-name">
             <h1>지원자 : <span class="yellow">{{applier.name}}</span></h1>
@@ -87,10 +87,11 @@
                     class="btn button_lion">
                     <span class="B">돌아가기</span>
             </a>
-            </button>
+        </button>
+        <a href="{% url 'add' applier.id %}">선택하기</a>
             </div>
         </div>
         
     </div>
-    
+{% endif %}
 {%endblock%}

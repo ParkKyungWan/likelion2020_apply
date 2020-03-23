@@ -1,5 +1,8 @@
 from django.db import models
 
+from django.conf import settings
+
+
 # Create your models here.
 
 class Apply(models.Model):
@@ -16,5 +19,5 @@ class Apply(models.Model):
     files=models.FileField(upload_to='files/', null=True)
     # choice = models.BooleanField(initial=False)
     
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name

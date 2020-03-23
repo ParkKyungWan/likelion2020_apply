@@ -34,6 +34,3 @@ def confirm(request):
     else:
         form = PostApply()
     return render(request, 'apply.html', {'form': form})
-
-# def choice(request):
-#     applier = Apply.objects.get(id=applier_id)
