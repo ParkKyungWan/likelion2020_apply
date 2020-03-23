@@ -25,6 +25,7 @@ import apply_app.views;
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',apply_app.views.home,name="home"),
+    path('next/', apply_app.views.next, name="next"),
     path('apply/',include('apply_app.urls')),
     path('auth/', include('auth_app.urls')),
 

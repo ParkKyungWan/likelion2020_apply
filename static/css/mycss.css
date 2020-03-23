@@ -53,6 +53,10 @@ footer{
     text-align:left;
     margin-left:15%;
 }
+.right{
+    text-align:right;
+    margin-right:15%;
+}
 .div-center{
     text-align:center;
 }
@@ -87,6 +91,7 @@ footer{
     width:100%;
     margin-bottom:20px;
 }
+
 .title{
     
     transform: translateX(-25%);
@@ -150,11 +155,16 @@ textarea{
     padding: 10px;
 }
 
+.social {
+    font-size: 30px;
+    text-align: center;
+}
+
 .form-box{
     width: auto;
     height: auto;
     margin-top:50px;
-    margin-bottom: 100px;
+    margin-bottom: 500px;
     color:white;
 }
 .policy_box{
@@ -183,6 +193,10 @@ textarea{
 .mar{
     margin-top: 10px;
 }
+.mar-r{
+    margin-right: 10px;
+}
+
 
 .applier-box{
     width: 20%;
@@ -227,4 +241,10 @@ textarea{
     border-radius: 15px;
 }
 
-/* static/mycss */
+.nav-footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* apply/mycss */

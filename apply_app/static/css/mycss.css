@@ -155,6 +155,11 @@ textarea{
     padding: 10px;
 }
 
+.social {
+    font-size: 30px;
+    text-align: center;
+}
+
 .form-box{
     width: auto;
     height: auto;
@@ -191,6 +196,7 @@ textarea{
 .mar-r{
     margin-right: 10px;
 }
+
 
 .applier-box{
     width: 20%;
