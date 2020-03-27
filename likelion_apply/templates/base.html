@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" sizes="16x16" href="https://cdn-apply.likelion.org/static/img/favicon/favicon-16x16.png">
     <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}?ver=1">
-    <link rel="stylesheet" href="{%static 'css/mycss.css'%}">
+    <link rel="stylesheet" href="{%static 'css/mycss.css'%}?{% now "U" %}">
     <!--?{% now "U" %}-->
     
     <title>멋쟁이 사자처럼 8기 지원</title>
@@ -28,6 +28,7 @@
         
   </head>
     <body>
+
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-12 container">
@@ -35,6 +36,11 @@
                     onclick="location.href='/'" 
                      src="https://cdn-apply.likelion.org/static/imgs/logo.png" 
                      alt="멋쟁이사자처럼 로고">
+                    <img
+                    style="height:25px;margin-top:15px;margin-left:5px;"
+                    src="{% static 'image/inulion.png' %}"  
+                    alt="인천대 멋쟁이사자처럼 로고"
+                    >
                 </div>
             </div>
         </div>
@@ -55,14 +61,24 @@
                         <h3><a class="delete-apply mar-r" href="{% url 'logout' %}">로그아웃 </a></h3>
                     {% endif %}
                     </div>
-                    <img
-                        style="height:70px;opacity:0.7;transform:translateY(60%);"
-                        src="{% static 'image/inulion.png' %}"  
-                        alt="인천대 멋쟁이사자처럼 로고"
-                    >
-                    <div style="margin-right:80px;">
-                        <p>17호관 학생회관 321호</p>
-                        <p>pkw8117197@likelion.org</p>
+                    <div >
+                        <div class="social" style="float:right; text-align:right;">
+                            <span class="B" style="font-size:13px;">Facebook : </span>
+                            <a href="https://facebook.com/likelioninu">
+                                <img
+                                style="height:30px;"
+                                src="{% static 'image/facebook.png' %}"  
+                                alt="fb"/>
+                            </a>
+                            <br>
+                            <span class=" B" style="font-size:13px;">KakaoTalk : </span>
+                            <a href="https://pf.kakao.com/_suMPd">
+                                <img
+                                style="height:20px;"
+                                src="{% static 'image/kakao.png' %}"  
+                                alt="fb"/>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

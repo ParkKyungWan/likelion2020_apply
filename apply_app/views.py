@@ -33,6 +33,8 @@ def confirm(request):
         if form.is_valid():
             form.save()
             return render(request,'success.html')
+        else:
+            return render(request,'fail.html')
     else:
         form = PostApply()
     return render(request, 'apply.html', {'form': form})

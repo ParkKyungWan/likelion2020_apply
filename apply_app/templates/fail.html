@@ -1,0 +1,14 @@
+{%include 'base.html'%}
+{%load static%}
+{%block content%}
+<div class="middle_content" >
+        
+    <h1 class="B" >제출에 실패하였습니다.</h1>
+    <h1 class="yellow B">올바르지 않은 항목이 있습니다. </h1>
+    <button 
+            onclick="location.href='/apply'" 
+            class="btn btn-warning button_lion">
+            <span class="B">돌아가기</span>
+        </button>
+</div>
+{%endblock%}
